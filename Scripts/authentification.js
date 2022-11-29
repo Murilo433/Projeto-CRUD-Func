@@ -56,7 +56,7 @@ function novoUsuario(email, senha) {
             swal(`Bem vindo, ${JSON.stringify(result.user.email)}`)
             
             //Direcionamento do usuario para a tela inicial
-            window.location.href = `${baseURL}/home.html`
+            window.location.href = "home.html"
         })
         .catch(error => {
             let erro = ''
@@ -94,13 +94,13 @@ function novoUsuario(email, senha) {
     firebase.auth().onAuthStateChanged(user => {
         if (!user) {
             console.log('Acesso inválido. Redirecionando...')
-            window.location.href = `${baseURL}/index.html` //URL Inicial
+            window.location.href = 'index.html' //URL Inicial
         }
     })
 }
 
 function logOut() {
     firebase.auth().signOut().then(() => {
-        window.location.href = `${baseURL}/index.html`;
+        window.location.href = 'index.html';
     })
 }
