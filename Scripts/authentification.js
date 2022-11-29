@@ -19,7 +19,7 @@ function loginFirebase(email, senha) {
         .signInWithEmailAndPassword(email, senha)
         .then(result => {
             swal(`Bem Vindo, ${JSON.stringify(result.user.email)}`)
-            window.location.href = `${baseURL}/home.html`
+            window.location.href = "Projeto-CRUD-Func/home.html"
         })
         .catch(error => {
             let erro = ''
