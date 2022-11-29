@@ -3,7 +3,7 @@
 
 
 
-const baseURL = window.location.search
+const baseURL = ""
 
 /** 
 *loginFirebase
