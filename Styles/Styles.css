@@ -1,0 +1,142 @@
+/*Cadastro e Login */
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+}
+
+.form {
+    padding: 20px;
+}
+
+.card {
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.card button {
+    font-size: 14px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.formControl {
+    border: 1px solid #f0f0f0;
+    display: block;
+    border-radius: 7px;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.formControl:hover {
+    border: 1px solid;
+    display: block;
+    border-radius: 7px;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+}
+
+.formControl.error {
+    border-color: #f00;
+    transition: 0.6s;
+}
+
+/* Home*/
+/* Geral */
+#home {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+/* p,li{
+    color: #444;
+    font-size: 14px;
+} */
+
+/* NavBar */
+
+#homeHeader .navbar {
+    background-color: #353D41;
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 80px;
+    height: 60px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff
+}
+
+#navbar-links a {
+    color: #fff;
+}
+
+#logout-menu {
+    background-color: #f00;
+    border-radius: 10px;
+}
+
+#navbar-links a:hover {
+    color: #ddd;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    /* 80% da fonte do root */
+    padding: 1rem .8rem;
+}
+
+/* Home */
+
+#home {
+    background-color: #B0C4DE;
+}
+
+.formulario {
+    display: flexbox;
+    margin-top: 120px;
+}
+
+.formulario ul li a {
+    margin: 50px;
+    color: #000;
+    text-decoration: none;
+}
+
+.formulario ul li a:hover {
+    color: #ccc;
+}
+
+/*Cadastro*/
+.cadastro {
+    background-color: #B0C4DE;
+}
+
+.hidden {
+    visibility: hidden;
+}

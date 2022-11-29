@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/Styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&family=Oswald:wght@500&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="home" onload="verificaLogado()">
+    <header id="homeHeader">
+        <div class="container" id="nav-container">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <img id="logo" src="images/logo.png" alt="">
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link" id="home-menu">Cadastro</a>
+                        <a href="Home.html" class="nav-item nav-link" id="cadastro-menu">Home</a>
+                        <a onclick="logOut()" class="nav-item nav-link" id="logout-menu">Logout</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class=" formulario container-fluid">
+        <h3 class="text-info text-center"> <img src="icons/person-workspace.svg" class="m-2" alt="Bootstrap">Cadastro de
+            funcionario</h3>
+        <hr>
+        <div class="row">
+            <form id="formCadastro">
+                <h4 class="text-info text-left my-2">Geral</h4>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="name">Nome *</label>
+                        <input type="text" class="formControl" name="nome" id="nome" placeholder="Nome Completo"
+                            autofocus required>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="salario">Salario *</label>
+                        <input type="number" class="formControl" name="salario" id="salario" placeholder="Salario"
+                            min="0" step="0.01" required>
+                    </div>
+                    <div class="col-sm-4 my-2">
+                        <label for="nascimento">Nascimento *</label>
+                        <input type="date" class="formControl" name="nascimento" id="nascimento"
+                            placeholder="Nascimento" required>
+                    </div>
+                    <div class="col-sm-4 my-2">
+                        <label for="nascimento">Sexo *</label>
+                        <select class="formControl valid input-sm" id="sexo" name="sexo" required>
+                            <option value="">Selecione</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 my-2">
+                        <label for="nascimento">CPF *</label>
+                        <input type="text" class="formControl" name="cpf" id="cpf" placeholder="CPF"
+                         onchange="validaCPF(document.getElementById('cpf').value)" maxlength="14" required>
+                    </div>
+                    <hr>
+                </div>
+                <hr>
+                <h4 class="text-info text-left my-2">Endereço</h4>
+                <div class="row">
+                    <div class="col-sm-4 my-2">
+                        <label for="nascimento">Rua:</label>
+                        <input type="text" class="formControl" name="rua" id="rua" placeholder="Rua">
+                    </div>
+                    <div class="col-sm-4 my-2">
+                        <label for="nascimento">Bairro:</label>
+                        <input type="text" class="formControl" name="bairro" id="bairro" placeholder="Bairro">
+                    </div>
+                    <div class="col-sm-4 my-2">
+                        <label for="nascimento">País de nascimento: *</label>
+                        <input type="text" class="formControl" name="paisNasc" id="paisNasc"
+                            placeholder="Pais Nascimento" required>
+                    </div>
+                    <div class="col-sm-4 my-2">
+                        <label for="nascimento">Município: *</label>
+                        <input type="text" class="formControl" name="municipio" id="municipio" placeholder="Município"
+                            required>
+                    </div>
+                    <div class="col-sm-2 my-2">
+                        <label for="nascimento">UF: *</label>
+                        <input type="text" class="formControl" name="uf" id="uf" placeholder="UF" required>
+                    </div>
+                </div>
+                <hr>
+                <div class="form-group my-2">
+                    <input type="hidden" name="id" id="id">
+                </div>
+                <hr>
+                <button class="btn btn-primary float-left my-2" onclick="salvar(event, 'funcionarios'); errorHome()">
+                    <img src="icons/send-fill.svg" class="mx-2" alt="Bootstrap">Enviar</button>
+            </form>
+
+</body>
+
+<!---Carregando os scripts do firebase-->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+<!--Carregando JS-->
+<script src="Scripts/firebase.js"></script>
+<script src="Scripts/authentification.js"></script>
+<script src="Scripts/dados.js"></script>
+
+<!--Script-->
+<script src="Scripts/script.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</html>

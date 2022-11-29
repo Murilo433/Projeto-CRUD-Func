@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles/Styles.css">
+
+</head>
+
+<body id="formCadastro" class="cadastro" onload="verificaLogado();obtemDados('funcionarios')">
+    <header id="homeHeader">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <img id="logo" src="images/Logo.png" alt="Logo">
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                <div class="navbar-nav">
+                    <a href="Cadastro.html" class="nav-item nav-link" id="home-menu">Cadastro</a>
+                    <a href="#" class="nav-item nav-link" id="cadastro-menu">Home</a>
+                    <a onclick="logOut()" class="nav-item nav-link" id="logout-menu">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--Input para pegar os valores na hora de editar-->
+    <input type="text" class="hidden" value="tId" id="tId" name="tId" />
+    <input type="text" class="hidden" value="tNome" id="tNome" name="tNome" />
+    <input type="text" class="hidden" value="tSalario" id="tSalario" name="tSalario" />
+    <input type="text" class="hidden" value="tNasc" id="tNasc" name="tNasc" />
+    <input type="text" class="hidden" value="tSexo" id="tSexo" name="tSexo" />
+    <input type="text" class="hidden" value="tCPF" id="tCPF" name="tCPF" />
+    <input type="text" class="hidden" value="tRua" id="tRua" name="tRua" />
+    <input type="text" class="hidden" value="tBairro" id="tBairro" name="tBairro" />
+    <input type="text" class="hidden" value="tPaisNasc" id="tPaisNasc" name="tPaisNasc" />
+    <input type="text" class="hidden" value="tMun" id="tMun" name="tMun" />
+    <input type="text" class="hidden" value="tUF" id="tUF" name="tUF" />
+    <input type="text" class="hidden" value="edit" id="edit" name="edit" />
+    <div class="formulario ">
+        <h3 class="text-primary text-center py-2">Funcionarios</h3>
+        <hr>
+        <table id="tabelaDados"
+            class=" text-center table w-100 table-dark table-striped table-borderless  table-hover">
+        </table>
+    </div>
+    </div>
+    </div>
+    <!---Carregando os scripts do firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+    <!--Carregando JS-->
+    <script src="Scripts/dados.js"></script>
+    <script src="Scripts/authentification.js"></script>
+    <script src="Scripts/firebase.js"></script>
+    <!---Scripts-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+
+</html>
