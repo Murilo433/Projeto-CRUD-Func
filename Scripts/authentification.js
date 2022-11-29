@@ -3,7 +3,7 @@
 
 
 
-const baseURL = window.location.search
+const baseURL = "Projeto-CRUD-Func"
 
 /** 
 *loginFirebase
@@ -19,7 +19,7 @@ function loginFirebase(email, senha) {
         .signInWithEmailAndPassword(email, senha)
         .then(result => {
             swal(`Bem Vindo, ${JSON.stringify(result.user.email)}`)
-            window.location.href = `${baseURL}/home.html`
+            window.location.href = `${baseURL}/Home.html`
         })
         .catch(error => {
             let erro = ''
