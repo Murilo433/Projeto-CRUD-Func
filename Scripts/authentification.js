@@ -3,7 +3,7 @@
 
 
 
-const baseURL = "Projeto-CRUD-Func"
+const baseURL = ""
 
 /** 
 *loginFirebase
